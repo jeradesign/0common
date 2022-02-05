@@ -1,3 +1,8 @@
+### From Xcode-generated info/exclude, so we will ignore even if we clone project outside of Xcode
+
+.DS_Store
+UserInterfaceState.xcuserstate
+
 ### From github/gitignore/main/Swift.gitignore:
 
 # Xcode
