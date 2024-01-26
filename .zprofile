@@ -5,3 +5,7 @@
 # Apple's /etc/zprofile clobbers the $PATH set up by .zshenv
 # so restore it here
 source $HOME/.zshenv
+
+
+# Added by Toolbox App
+export PATH="$PATH:/Users/jbrewer/Library/Application Support/JetBrains/Toolbox/scripts"

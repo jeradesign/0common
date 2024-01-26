@@ -11,3 +11,4 @@ autoload -Uz compinit && compinit
 alias unp='unpushed --walk --tracked --remote /proj'
 alias emacs='emacsclient -c'
 alias port='echo "You mean brew."'
+alias ows='open *.xcworkspace'
