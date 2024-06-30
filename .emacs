@@ -8,6 +8,7 @@
  '(backup-by-copying t)
  '(backup-directory-alist '((".*" . "~/.emacsbackups")))
  '(kept-new-versions 10)
+ '(read-file-name-completion-ignore-case nil)
  '(vc-make-backup-files t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
