@@ -54,6 +54,11 @@
 (setq ispell-program-name "/opt/homebrew/bin/ispell")
 (add-hook 'text-mode-hook 'flyspell-mode)
 
+;; Use *Notes* Buffer which is rememebered between sessions
+(setq initial-buffer-choice 'remember-notes)
+(setq remember-notes-buffer-name "\*scratch\*")
+(remember-notes)
+
 ;; Emacs server ---------------------------------------------------------------
 
 (server-start)
