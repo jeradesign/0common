@@ -11,6 +11,9 @@ autoload -Uz compinit && compinit
 alias unp='unpushed --walk --tracked --remote /proj'
 alias emacs='emacsclient -c'
 alias port='echo "You mean brew."'
-alias ows='open *.xcworkspace'
+alias ows='open /Applications/Xcode.app *.xcworkspace'
+alias opr='open /Applications/Xcode.app *.xcodeproj'
+alias bows='open /Applications/Xcode-beta.app *.xcworkspace'
+alias bopr='open /Applications/Xcode-beta.app *.xcodeproj'
 
 export CLICOLOR=1
