@@ -43,6 +43,9 @@
 ;; delete (not kill) selected text when I type over it
 (delete-selection-mode t)
 
+;; word wrap
+(setq-default word-wrap t)
+
 ;; Ediff ----------------------------------------------------------------------
 
 ;; keep ediff from popping up its own control frame
