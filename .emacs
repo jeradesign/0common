@@ -8,6 +8,7 @@
  '(backup-by-copying t)
  '(backup-directory-alist '((".*" . "~/.emacsbackups")))
  '(kept-new-versions 10)
+ '(package-selected-packages '(swift-mode use-package))
  '(read-file-name-completion-ignore-case nil)
  '(vc-make-backup-files t))
 (custom-set-faces
@@ -61,6 +62,34 @@
 (setq initial-buffer-choice 'remember-notes)
 (setq remember-notes-buffer-name "\*scratch\*")
 (remember-notes)
+
+;;; Add MELPA as a package source
+(require 'package)
+(setq package-enable-at-startup nil)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(package-initialize)
+
+;;; Bootstrap `use-package'
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(eval-when-compile
+  (require 'use-package))
+
+;;; Locate sourcekit-lsp
+(defun find-sourcekit-lsp ()
+  (or (executable-find "sourcekit-lsp")
+      (and (eq system-type 'darwin)
+           (string-trim (shell-command-to-string "xcrun -f sourcekit-lsp")))
+      "/usr/local/swift/usr/bin/sourcekit-lsp"))
+
+;; Swift editing support
+(use-package swift-mode
+    :ensure t
+    :mode "\\.swift\\'"
+    :interpreter "swift")
+
 
 ;; Emacs server ---------------------------------------------------------------
 
