@@ -16,6 +16,8 @@ setopt PROMPT_SUBST
 
 # Set up shell prompt
 PROMPT='%F{red}[%1~ ($vcs_info_msg_0_)]%#%f '
+# Right hand timestamp
+RPROMPT='%F{red}%D %*%f'
 
 # Set up aliases
 alias unp='unpushed --walk --tracked --remote /proj'
