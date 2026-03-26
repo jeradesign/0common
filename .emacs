@@ -7,7 +7,9 @@
  ;; If there is more than one, they won't work right.
  '(backup-by-copying t)
  '(backup-directory-alist '((".*" . "~/.emacsbackups")))
+ '(confirm-kill-emacs 'y-or-n-p)
  '(kept-new-versions 10)
+ '(ns-pop-up-frames t)
  '(package-selected-packages '(swift-mode use-package))
  '(read-file-name-completion-ignore-case nil)
  '(vc-make-backup-files t))
