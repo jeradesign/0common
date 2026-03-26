@@ -22,7 +22,7 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 # Add emacs and command line tools (Emacs from https://emacsformacosx.com)
 export PATH="/Applications/Emacs.app/Contents/MacOS/bin":$PATH
 
-# Add my the bin directory in my home directory
+# Add the bin directory in my home directory
 export PATH="$HOME/bin:$PATH"
 
 # Set up other environment variables
